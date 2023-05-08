@@ -1,0 +1,41 @@
+<nav class="navbar dark fixed-top">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center">
+            <button class="btn" type="button" style="transform: scale(1.9)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fa-lg" style="color: #ffffff"></i>
+            </button>
+            <h2 class="my-2 mx-2 text-white">Dashboard</h2>
+        </div>
+
+        <img src="/images/logo_2.png" width="69" height="53" alt="app_logo"/>
+        <div class="offcanvas offcanvas-size-sm offcanvas-start dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <img src="/images/logo_2.png" width="69" height="53" alt="app_logo"/>
+                <button type="button" class="btn" style="border: none" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff"></i>
+                </button>
+            </div>
+
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fw-bold" aria-current="page" href="/dashboard">
+                            <h4 class="text-white">Dashboard</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item py-2">
+                        <a class="nav-link text-white fw-bold" href="/statistics">
+                            <h4 class="text-white">Statistics</h4>
+                        </a>
+                    </li>
+                    <form method="post" action="/logout">
+                        <button type="submit" class="btn btn-dark" style="margin-top: 67vh">
+                            <h4 class="text-white">Log out</h4>
+                      </button>
+                    </form>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
