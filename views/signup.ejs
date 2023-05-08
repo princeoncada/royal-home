@@ -1,67 +1,43 @@
 <%- include('header'); %>
 <div class="container" style="padding-top: 90px">
     <div class="d-flex flex-column align-items-center justify-content-center">
-      <div style="padding-bottom: 50px">
-        <img src="images/logo_2.png" width="240" height="184" />
-      </div>
-      <form id="signup-form">
-        <div class="d-flex flex-row">
-          <div class="form-group mb-2" style="padding-right: 10px">
-            <input
-              type="text"
-              class="form-control form-control-custom-2"
-              id="firstname"
-              name="firstname"
-              placeholder="First Name*"
-            />
-          </div>
-
-          <div class="form-group" style="padding-bottom: 15px">
-            <input
-              type="text"
-              class="form-control form-control-custom-2"
-              style="width: 160px"
-              id="lastname"
-              name="lastname"
-              placeholder="Last Name*"
-            />
-          </div>
+        <div style="padding-bottom: 50px">
+            <img src="images/logo_2.png" width="240" height="184" />
         </div>
+        <form id="signup-form" method="post" action="/signing">
+            <div class="d-flex flex-row">
+                <div class="form-group mb-2" style="padding-right: 10px">
+                    <input type="text" class="form-control form-control-custom-2" id="firstname" name="firstname" placeholder="First Name*" />
+                </div>
 
-        <div class="form-group" style="padding-bottom: 15px">
-          <input
-            type="email"
-            class="form-control form-control-custom"
-            id="sEmail"
-            name="email"
-            placeholder="Email Address*"
-          />
+                <div class="form-group" style="padding-bottom: 15px">
+                    <input type="text" class="form-control form-control-custom-2" style="width: 160px" id="lastname" name="lastname" placeholder="Last Name*" />
+                </div>
+            </div>
+
+            <div class="form-group" style="padding-bottom: 15px">
+                <input type="email" class="form-control form-control-custom" id="sEmail" name="email" placeholder="Email Address*" />
+            </div>
+
+            <div class="form-group" style="padding-bottom: 15px">
+                <input type="password" class="form-control form-control-custom" id="sPassword" name="password" placeholder="Password*" />
+            </div>
+
+            <div class="alert alert-danger" role="alert" <%- hidden %>>
+              <%- text %>
+            </div>
+
+            <div style="padding-top: 50px">
+                <button type="submit" class="btn btn-custom text-white light-blue fw-semibold">
+                    Sign Up
+                </button>
+            </div>
+        </form>
+
+        <div style="padding-left: 150px; padding-top: 2px">
+            <span class="gray">Forgot your password?</span>
         </div>
-
-        <div class="form-group" style="padding-bottom: 15px">
-          <input
-            type="password"
-            class="form-control form-control-custom"
-            id="sPassword"
-            name="password"
-            placeholder="Password*"
-          />
-        </div>
-
-        <div style="padding-top: 50px">
-          <button
-            type="submit"
-            class="btn btn-custom text-white light-blue fw-semibold"
-          >
-            Sign Up
-          </button>
-        </div>
-      </form>
-
-      <div style="padding-left: 150px; padding-top: 2px">
-        <span class="gray">Forgot your password?</span>
-      </div>
     </div>
-  </div>
+</div>
 </body>
-<%- include('footer'); %> 
+<%- include('footer'); %>

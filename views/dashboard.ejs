@@ -1,119 +1,42 @@
 <%- include('header'); %>
-<nav class="navbar dark fixed-top">
-    <div class="container-fluid">
-      <div class="d-flex align-items-center">
-        <button
-          class="btn"
-          type="button"
-          style="transform: scale(1.9)"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <i class="fa-solid fa-bars fa-lg" style="color: #ffffff"></i>
-        </button>
-        <h2 class="my-2 mx-2 text-white">Dashboard</h2>
-      </div>
+<%- include('nav') %>
 
-      <img src="/images/logo_2.png" width="69" height="53" />
-      <div
-        class="offcanvas offcanvas-size-sm offcanvas-start dark"
-        tabindex="-1"
-        id="offcanvasNavbar"
-        aria-labelledby="offcanvasNavbarLabel"
-      >
-        <div class="offcanvas-header">
-          <img src="/images/logo_2.png" width="69" height="53" />
-          <button
-            type="button"
-            class="btn"
-            style="border: none"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          >
-            <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff"></i>
-          </button>
-        </div>
-
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a
-                class="nav-link active text-white fw-bold"
-                aria-current="page"
-                href="dashboard.ejs"
-              >
-                <h4 class="text-white">Dashboard</h4></a
-              >
-            </li>
-            <li class="nav-item py-2">
-              <a class="nav-link text-white fw-bold" href="statistics.ejs"
-                ><h4 class="text-white">Statistics</h4></a
-              >
-            </li>
-            <li class="nav-item" style="padding-top: 67vh">
-              <a class="nav-link text-white fw-bold" href="index.ejs"
-                ><h4 class="text-white">Log out</h4></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container" style="padding-top: 90px">
+<div class="container" style="padding-top: 90px">
     <div class="d-flex flex-column align-items-center justify-content-center">
-      <div class="card mb-3 yellow" style="width: 22rem">
-        <div class="card-body">
-          <h5 class="card-title fw-bold" style="font-size: 30px">
-            Energy Consumption
-          </h5>
-          <p class="card-text fw-bold fs-5" style="padding-bottom: 10px">
-            Analysis
-          </p>
-          <a
-            href="statistics.ejs"
-            class="btn btn-dark fw-bold"
-            style="width: 100px"
-            >View</a
-          >
+        <div class="card mb-3 yellow" style="width: 22rem">
+            <div class="card-body">
+                <h5 class="card-title fw-bold" style="font-size: 30px">
+                    Energy Consumption
+                </h5>
+                <p class="card-text fw-bold fs-5" style="padding-bottom: 10px">
+                    Analysis
+                </p>
+                <a href="/statistics" class="btn btn-dark fw-bold" style="width: 100px">View</a>
+            </div>
         </div>
-      </div>
 
-      <div class="py-4">
-        <h4 class="text-white">Connected Appliances</h4>
-      </div>
-
-      <div style="padding-top: 30px">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <img
-                src="/images/fan.jpg"
-                class="rounded"
-                width="134"
-                height="134"
-              />
-            </div>
-            <div class="col-md-6">
-              <img
-                src="/images/OIP.jpg"
-                class="rounded"
-                width="134"
-                height="134"
-              />
-            </div>
-          </div>
-          <div class="row py-4">
-            <div class="col-md-6">
-              <img> 
-            </div>
-          
-          </div>
+        <div class="py-4">
+            <h4 class="text-white">Connected Appliances</h4>
         </div>
-      </div>
+
+        <div style="padding-top: 30px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/images/fan.jpg" class="rounded" width="134" height="134" alt="appliance1"/>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="/images/OIP.jpg" class="rounded" width="134" height="134" alt="appliance2"/>
+                    </div>
+                </div>
+                <div class="row py-4">
+                    <div class="col-md-6">
+                        <img>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-<%- include('footer'); %> 
+</div>
+<%- include('footer'); %>
