@@ -1,0 +1,49 @@
+<%- include('header'); %>
+<div class="container" style="padding-top: 90px">
+  <div class="d-flex flex-column align-items-center justify-content-center">
+    <div style="padding-bottom: 50px">
+      <img src="images/logo_2.png" width="240" height="184" />
+    </div>
+    <form id="login-form">
+      <div class="form-group mb-1">
+        <div class="py-2">
+          <label for="email" class="text-white fw-semibold">Email</label>
+        </div>
+        <input
+          type="email"
+          class="form-control form-control-custom"
+          id="email"
+          name="email"
+          placeholder="Enter your email address"
+        />
+      </div>
+
+      <div class="form-group mb-3">
+        <div class="py-2">
+          <label for="password" class="text-white fw-semibold">Password</label>
+        </div>
+        <input
+          type="password"
+          class="form-control form-control-custom"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+        />
+      </div>
+
+      <div style="padding-top: 50px">
+        <button
+          type="submit"
+          class="btn btn-custom text-white light-blue fw-semibold"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+
+    <div style="padding-left: 150px; padding-top: 2px">
+      <span class="gray">Forgot your password?</span>
+    </div>
+  </div>
+</div>
+<%- include('footer'); %>
