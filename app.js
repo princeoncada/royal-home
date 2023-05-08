@@ -19,7 +19,6 @@ const firebaseConfig = {
 initializeApp(firebaseConfig)
 const auth = getAuth();
 auth.onAuthStateChanged(user => {
-    console.log(auth.user)
 })
 
 const app = express();
