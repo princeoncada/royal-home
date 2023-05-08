@@ -65,90 +65,111 @@
 </nav>
 
 <div class="container" style="padding-top: 90px">
-  <div class="d-flex flex-column align-items-center justify-content-center">
-    <div class="card mb-3 yellow" style="width: 22rem">
-      <div class="card-body mt-3">
-        <div class="form-group mb-1">
+    <div class="d-flex flex-column align-items-center justify-content-center">
+      <div class="card mb-3 yellow" style="width: 22rem">
+        <div class="card-body mt-3">
+          <div class="form-group mb-2">
+            <input
+              type="text"
+              class="form-control"
+              style="padding: 10px"
+              id="Appliance-add"
+              name="Appliance"
+              placeholder="Appliance name*"
+            />
+          </div>
+
+          <div class="d-flex align-items-center justify-content-center pb-2">
+            <div class="me-3">
+              <button
+                class="btn dark text-white fw-semibold"
+                style="width: 120px"
+                type="button"
+              >
+                Image
+              </button>
+            </div>
+
+            <div class="dropdown">
+              <button
+                class="btn dark text-white fw-semibold"
+                style="width: 180px"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Port Number
+                <i class="dropdown-toggle" style="padding-left: 30px"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="form-group me-5">
+          <label for="time_on" class="text-white fw-semibold my-1"
+            >Time on</label
+          >
           <input
-            type="text"
-            class="form-control"
-            style="padding: 10px"
-            id="Appliance"
-            name="Appliance"
-            placeholder="Appliance name*"
+            type="number"
+            class="form-control form-control-custom-3"
+            id="time_on"
+            name="time_on"
+            placeholder="13:00"
           />
         </div>
-
-        <div class="dropdown">
-          <button
-            class="btn dark-2 text-white fw-semibold"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+        <div class="form-group">
+          <label for="time_off" class="text-white fw-semibold my-1"
+            >Time off</label
           >
-            Port Number
-            <i class="dropdown-toggle" style="padding-left: 50px"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
+          <input
+            type="number"
+            class="form-control form-control-custom-3"
+            id="time_off"
+            name="time_off"
+            placeholder="13:00"
+
+          />
         </div>
       </div>
-    </div>
 
-    <div class="d-flex align-items-center justify-content-center">
-      <div class="form-group me-5">
-        <label for="time_on" class="text-white fw-semibold my-1">Time on</label>
-        <input
-          type="number"
-          class="form-control form-control-custom-3"
-          id="time_on"
-          name="time_on"
-        />
+      <div class="card mt-4 dark-2" style="width: 22rem">
+        <div class="card-body" style="padding-top: 120px">
+          <h1 class="text-white" style="padding-bottom: 120px">
+            Other Features
+          </h1>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="time_off" class="text-white fw-semibold my-1"
-          >Time off</label
-        >
-        <input
-          type="number"
-          class="form-control form-control-custom-3"
-          id="time_off"
-          name="time_off"
-        />
-      </div>
-    </div>
 
-    <div class="card mt-5 dark-2" style="width: 22rem">
-      <div class="card-body" style="padding-top: 130px">
-        <h1 class="text-white" style="padding-bottom: 130px">Other Features</h1>
-      </div>
-    </div>
-
-    <div class="d-flex align-items-center justify-content-center mt-5">
-      <div class="form-group me-5">
-        <button
-          type="submit"
-          class="btn btn-custom-2 text-white light-blue fw-semibold"
-        >
-          Confirm
-        </button>
-      </div>
-      <div class="form-group">
-        <button
-          type="submit"
-          class="btn btn-custom-2 text-white light-red fw-semibold"
-        >
-          Cancel
-        </button>
+      <div class="d-flex align-items-center justify-content-center mt-5">
+        <div class="form-group me-5">
+          <button
+            type="submit"
+            class="btn btn-custom-2 text-white light-blue fw-semibold"
+          >
+            Confirm
+          </button>
+        </div>
+        <div class="form-group">
+          <button
+            type="submit"
+            class="btn btn-custom-2 text-white light-red fw-semibold"
+          >
+            Cancel
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 <%- include('footer'); %>
