@@ -41,10 +41,20 @@
               id="ap2"
               alt="appliance2"
             />
-          </div>
+            </div>
           </div>
         </div>
         <div class="row py-4">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <div id="img2">
+                <img
+                  src="/images/light_bulb.png"
+                  class="rounded fit ap"
+                  id="ap3"
+                  alt="appliance3"
+                />
+                </div>
+              </div>
           <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
             <div class="form-group" id="add-button">
             
@@ -69,8 +79,12 @@
 <form method="post" id="add-appliance" action="/add_appliance"></form>
 <form method="post" id="appliance1" action="/app1"></form>
 <form method="post" id="appliance2" action="/app2"></form>
+<form method="post" id="appliance3" action="/app3"></form>
+
 
 <script>
+
+$("#dsh").attr("href", "/dashboard2")
 
 $('#curpage').text('Dashboard')
 
@@ -94,8 +108,12 @@ $(".ap")
         $("#appliance1").submit()
 
       }
-      else{
+      else if(e.target.id === "ap2"){
         $("#appliance2").submit()
+
+      }
+      else{
+        $("#appliance3").submit()
       }
       clicks = 0;
     }

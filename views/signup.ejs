@@ -7,20 +7,20 @@
         <form id="signup-form" method="post" action="/signing">
             <div class="d-flex flex-row">
                 <div class="form-group mb-2" style="padding-right: 10px">
-                    <input type="text" class="form-control form-control-custom-2" id="firstname" name="firstname" placeholder="First Name*" />
+                    <input type="text" class="form-control form-control-custom-2" id="firstname" name="firstname" placeholder="First Name*" required/>
                 </div>
 
                 <div class="form-group" style="padding-bottom: 15px">
-                    <input type="text" class="form-control form-control-custom-2" style="width: 160px" id="lastname" name="lastname" placeholder="Last Name*" />
+                    <input type="text" class="form-control form-control-custom-2" style="width: 160px" id="lastname" name="lastname" placeholder="Last Name*" required/>
                 </div>
             </div>
 
             <div class="form-group" style="padding-bottom: 15px">
-                <input type="email" class="form-control form-control-custom" id="sEmail" name="email" placeholder="Email Address*" />
+                <input type="email" class="form-control form-control-custom" id="sEmail" name="email" placeholder="Email Address*" required />
             </div>
 
             <div class="form-group" style="padding-bottom: 15px">
-                <input type="password" class="form-control form-control-custom" id="sPassword" name="password" placeholder="Password*" />
+                <input type="password" class="form-control form-control-custom" id="sPassword" name="password" placeholder="Password*" required />
             </div>
 
             <div class="alert alert-danger" role="alert" <%- hidden %>>
@@ -35,7 +35,7 @@
         </form>
 
         <div style="padding-left: 150px; padding-top: 2px">
-            <span class="gray">Forgot your password?</span>
+            <a href="#" style="text-decoration: none;"><span class="gray">Forgot your password?</span></a>
         </div>
     </div>
 </div>

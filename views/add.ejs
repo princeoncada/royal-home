@@ -1,6 +1,5 @@
 <%- include('header'); %>
 <%- include('nav') %>
-
 <div class="container" style="padding-top: 90px">
   <div class="d-flex flex-column align-items-center justify-content-center">
     <div class="card mb-3 yellow" style="width: 22rem">
@@ -8,34 +7,45 @@
         <div class="form-group mb-1">
           <input
             type="text"
-            class="form-control"
+            class="form-control form-control-custom"
             style="padding: 10px"
-            id="Appliance"
+            id="Appliance-add"
             name="Appliance"
             placeholder="Appliance name*"
+            required
           />
         </div>
 
-        <div class="dropdown">
-          <button
-            class="btn dark-2 text-white fw-semibold"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Port Number
-            <i class="dropdown-toggle" style="padding-left: 50px"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
+        <div class="d-flex align-items-center justify-content-center pb-2">
+          <div class="me-3">
+            <button
+              class="btn dark text-white fw-semibold"
+              style="width: 120px"
+              type="button"
+            >
+              Image
+            </button>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="btn dark text-white fw-semibold"
+              style="width: 180px"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Port Number
+              <i class="dropdown-toggle" style="padding-left: 30px"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">3</a></li>
+              <li><a class="dropdown-item" href="#">4</a></li>
+              <li><a class="dropdown-item" href="#">5</a></li>         
+            </ul>
+          </div>
         </div>
+
       </div>
     </div>
 
@@ -47,6 +57,7 @@
           class="form-control form-control-custom-3"
           id="time_on"
           name="time_on"
+          placeholder="13:00"
         />
       </div>
       <div class="form-group">
@@ -58,34 +69,50 @@
           class="form-control form-control-custom-3"
           id="time_off"
           name="time_off"
+          placeholder="13:00"
         />
       </div>
     </div>
 
-    <div class="card mt-5 dark-2" style="width: 22rem">
-      <div class="card-body" style="padding-top: 130px">
-        <h1 class="text-white" style="padding-bottom: 130px">Other Features</h1>
+    <div class="card mt-4 dark-2" style="width: 22rem">
+      <div class="card-body" style="padding-top: 120px">
+        <h1 class="text-white" style="padding-bottom: 120px">Other Features</h1>
       </div>
     </div>
 
     <div class="d-flex align-items-center justify-content-center mt-5">
+      
       <div class="form-group me-5">
+        <a href="/dashboard2">
+
         <button
           type="submit"
           class="btn btn-custom-2 text-white light-blue fw-semibold"
+          id="confirm"
         >
           Confirm
         </button>
+        </a>
+      
       </div>
       <div class="form-group">
+        <a href="/dashboard">
         <button
           type="submit"
           class="btn btn-custom-2 text-white light-red fw-semibold"
+          
         >
           Cancel
         </button>
+        </a>
       </div>
     </div>
   </div>
 </div>
+<script>
+  $('#curpage').text('Add')
+ 
+</script>
+
+</body>
 <%- include('footer'); %>
