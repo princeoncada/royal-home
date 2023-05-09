@@ -9,14 +9,14 @@
                 <div class="py-2">
                     <label for="email" class="text-white fw-semibold">Email</label>
                 </div>
-                <input type="email" class="form-control form-control-custom" id="email" name="email" placeholder="Enter your email address" />
+                <input type="email" class="form-control form-control-custom" id="email" name="email" placeholder="Enter your email address" required/>
             </div>
 
             <div class="form-group mb-3">
                 <div class="py-2">
                     <label for="password" class="text-white fw-semibold">Password</label>
                 </div>
-                <input type="password" class="form-control form-control-custom" id="password" name="password" placeholder="Enter your password" />
+                <input type="password" class="form-control form-control-custom" id="password" name="password" placeholder="Enter your password" required/>
             </div>
 
             <div class="alert alert-danger" role="alert" <%- hidden %>>
@@ -31,8 +31,9 @@
         </form>
 
         <div style="padding-left: 150px; padding-top: 2px">
-            <span class="gray">Forgot your password?</span>
+            <a href="#" style="text-decoration: none;"><span class="gray">Forgot your password?</span></a>
         </div>
     </div>
 </div>
+</body>
 <%- include('footer'); %>

@@ -7,7 +7,8 @@
       <div class="card mb-3 dark-2" style="width: 22rem">
         <div class="card-body">
           <h5 class="card-title fw-bold text-white" style="font-size: 30px">
-              Chart ni sya diri or something
+            <canvas id="energyChart" ></canvas>
+
             </h5>
           <p class="card-text fw-bold fs-5 text-white" style="padding-bottom: 10px">
               Energy Consumption
@@ -18,15 +19,66 @@
       <div class="card mb-3 dark-2" style="width: 22rem">
           <div class="card-body">
             <h5 class="card-title fw-bold text-white" style="font-size: 30px">
-                Chart ni sya diri or something
+              <canvas id="timeChart" ></canvas>
               </h5>
             <p class="card-text fw-bold fs-5 text-white" style="padding-bottom: 10px">
-                Timed On
+                Time Spent Turned On
               </p>
           </div>
         </div>
 
     </div>
   </div>
+  <script>
+    $('#curpage').text('Statistics')
+    
+    const xEnergyValues = [50,60,70,80,90,100,110,120,130,140,150];
+    const yEnergyValues = [7,8,8,9,9,9,10,11,14,14,15];
+    
+    new Chart("energyChart", {
+      type: "line",
+      data: {
+        labels: xEnergyValues,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,255,.5)",
+          borderColor: "rgba(67, 234, 86, 0.3)",
+          data: yEnergyValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        scales: {
+          yAxes: [{ticks: {min: 6, max:16, fontColor: "white"}}],
+          xAxes: [{ticks: {fontColor: "white"}}]
+        }
+      }
+    });
+
+    const xTimeValues = [30,35,70,105,150,160,228,320,345,35,150];
+    const yTimeValues = [7,8,8,13,12,12,10,11,14,14,11];
+    
+    new Chart("timeChart", {
+      type: "line",
+      data: {
+        labels: xTimeValues,
+        datasets: [{
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,255,.5)",
+          borderColor: "rgba(67, 234, 86, 0.3)",
+          data: yTimeValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        scales: {
+          yAxes: [{ticks: {min: 6, max:16, fontColor: "white"}}],
+          xAxes: [{ticks: {fontColor: "white"}}]
+        }
+      }
+    });
+  </script>
 </body>
 <%- include('footer'); %> 

@@ -4,7 +4,7 @@
             <button class="btn" type="button" style="transform: scale(1.9)" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars fa-lg" style="color: #ffffff"></i>
             </button>
-            <h2 class="my-2 mx-2 text-white">Dashboard</h2>
+            <h2 class="my-2 mx-2 text-white" id="curpage">Dashboard</h2>
         </div>
 
         <img src="/images/logo_2.png" width="69" height="53" alt="app_logo"/>
@@ -19,17 +19,17 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active text-white fw-bold" aria-current="page" href="/dashboard">
+                        <a class="nav-link active text-white fw-bold" aria-current="page" href="/dashboard" id="dsh">
                             <h4 class="text-white">Dashboard</h4>
                         </a>
                     </li>
                     <li class="nav-item py-2">
-                        <a class="nav-link text-white fw-bold" href="/statistics">
+                        <a class="nav-link text-white fw-bold" href="/statistics" id="stat">
                             <h4 class="text-white">Statistics</h4>
                         </a>
                     </li>
                     <form method="post" action="/logout">
-                        <button type="submit" class="btn btn-dark" style="margin-top: 67vh">
+                        <button type="submit" class="btn dark" style="margin-top: 67vh">
                             <h4 class="text-white">Log out</h4>
                       </button>
                     </form>
